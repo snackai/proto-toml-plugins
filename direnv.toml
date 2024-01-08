@@ -1,0 +1,24 @@
+name = "direnv"
+type = "cli"
+
+[platform.macos]
+archive-prefix = "direnv.darwin-{arch}"
+download-file = "direnv.darwin-{arch}"
+
+[platform.linux]
+archive-prefix = "direnv.linux-{arch}"
+download-file = "direnv.linux-{arch}"
+
+[platform.windows]
+archive-prefix = "direnv.windows-{arch}"
+download-file = "direnv.windows-{arch}"
+
+[install]
+download-url = "https://github.com/direnv/direnv/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/direnv/direnv"
